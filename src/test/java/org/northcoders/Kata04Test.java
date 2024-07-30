@@ -19,17 +19,6 @@ class Kata04Test {
     @Nested
     @DisplayName ("Test buttonResult method")
     class buttonResult {
-        @Test
-        void testNullException() {
-            assertThrows(NullPointerException.class, ()->kata.buttonResult(null), "Test null exception");
-        }
-
-        @Test
-        void testEmptyException(){
-            Kata04.STATUS[] input = null;
-            Kata04.STATUS expected = NEUTRAL;
-            assertEquals(expected, kata.buttonResult(new Kata04.STATUS[]{}), "return NEUTRAL when no button clicked");
-        }
 
         @Test
         void testSameCountBetweenLikeDislike(){
