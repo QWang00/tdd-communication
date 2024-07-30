@@ -17,6 +17,12 @@ class KataTest {
     @Nested
     @DisplayName("Test sumNumsBetweenLowHigh")
     class sumNumsBetweenLowHigh{
+        @Test
+        void testNulllInput() {
+
+            assertThrows(IllegalArgumentException.class, () -> {kata.sumNumsBetweenLowHigh(null);}, "Input cannot be null");
+
+        }
 
         @Test
         void testEmptylInput() {
@@ -25,6 +31,8 @@ class KataTest {
             int actual = kata.sumNumsBetweenLowHigh(input);
             assertEquals(expected, actual, "return 0 contains empty array");
         }
+
+
 
         @Test
         void testOneInt(){

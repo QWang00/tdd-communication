@@ -4,8 +4,9 @@ import java.util.List;
 
 public class Kata {
     public int sumNumsBetweenLowHigh(int[] nums){
-        //check if nums is/contain null
+        if(nums == null) throw new IllegalArgumentException("Input cannot be null");
         if( (nums.length < 3) ) return 0 ;
+
         int sum = 0;
 
         Arrays.sort(nums);
