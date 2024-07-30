@@ -12,10 +12,6 @@ public class Kata03 {
             int asciiValue = (int) str.charAt(i);
             sum += asciiValue;
         }
-
-
-
-
         return sum;
     }
 }
