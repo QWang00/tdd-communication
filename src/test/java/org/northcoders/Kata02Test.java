@@ -33,6 +33,11 @@ class Kata02Test {
             assertEquals(expected, actual, "returns number itself when array only includes one item");
         }
 
+        void testNullArrays(){
+            assertThrows(IllegalArgumentException.class, () -> kata.calculateMean(null ), "input should not be null");
+
+        }
+
         @Test
         void testArrayWithMultipleItems() {
             int[] input1 = new int[]{1, 2, 3};          // 2

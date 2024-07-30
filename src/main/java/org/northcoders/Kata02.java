@@ -2,6 +2,8 @@ package org.northcoders;
 
 public class Kata02 {
     public double calculateMean(int[] nums) {
+        if(nums == null) throw new IllegalArgumentException("input should not be null");
+
         if (nums.length == 0) {
             return 0;
         }
