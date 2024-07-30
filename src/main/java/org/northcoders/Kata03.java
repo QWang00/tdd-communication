@@ -2,7 +2,9 @@ package org.northcoders;
 
 public class Kata03 {
     public int calculateSumAscii(String str){
-        if(str.isEmpty()) throw new IllegalArgumentException();
+        if(str == null) throw new IllegalArgumentException("input should not be null");
+        if(str.isEmpty()) throw new IllegalArgumentException("input should not be empty");
+
         // initialize the sum
         int sum = 0;
         // iterate the string

@@ -18,10 +18,14 @@ class Kata03Test {
     @Nested
     @DisplayName("Test method calculateSumAscii")
     class calculateSumAscii {
+        @Test
+        void testNullInput(){
+            assertThrows(IllegalArgumentException.class, () -> kata.calculateSumAscii(null), "input should not be null");
+        }
 
         @Test
         void testEmptyInput() {
-            assertThrows(IllegalArgumentException.class, ()->kata.calculateSumAscii(""));
+            assertThrows(IllegalArgumentException.class, ()->kata.calculateSumAscii(""), "input should not be empty");
         }
 
         @Test
@@ -33,6 +37,8 @@ class Kata03Test {
                     () -> assertEquals(113, kata.calculateSumAscii("89"), "return ASCII sum of two digits")
             );
         }
+
+
     }
 
 }
